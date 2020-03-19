@@ -4,11 +4,10 @@
     margin-top: 20px;
 }
 
-#funcionarios{
-    border: 1px solid gray;
-    
-}
 
-#funcionarios li {
-    text-decoration: none;
+
+#lista {
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 1px solid gray;
 }

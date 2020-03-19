@@ -1,13 +1,19 @@
 *{
     background-color: #ff94b7;
-    
 }
+
 .logo{
     margin-top: 25px;
     margin-left: auto;
     margin-right: auto;
-    display: block
+    display: block;
+    max-width: 150px;
+    max-height: 150px;
+    width: auto;
+    height: auto;
 }
+
+
 .nome_loja{
     color: gray;
     text-align: center;
@@ -47,4 +53,6 @@
     color: white;
     text-align: center;
  }
-.footer p{background-color: gray;}
+.footer p{
+    background-color: gray;
+}

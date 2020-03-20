@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: #1d1e22;
+}
+
+#foto-perfil{
+    border-radius: 50%;
+    border: 4px solid greenyellow;
+    max-width: 250px;
+    max-height: 250px;
+    margin: 20px;
+}
+
+#menu{
+    border-right: 2px solid gray;
+    width: 300px;
+    height: 100vh;
+    display: inline-block;
+    position: fixed
+    
+}
+h1,h2,p, a, li, ul, ol{
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+{
+    text-align: center;
+}
+
+h2, h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+img, h1, p{
+    display: inline;
+}
+
+
+
+#menu ul{
+    margin-top: 80px;
+}
+#menu li{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#menu a{
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.icone{
+    max-width:35px;
+    max-height: 35px;
+    margin-left: 30px;
+    
+}
+
+#quadrado{
+    display: inline-block;
+    margin-left: 301px;
+    width: 80vw;
+    height: 100vh;
+}
+
+#perfil{
+    width: 40vw;
+    margin-left: 30px;
+    margin-top: 60px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+#perfil h1, p{
+    margin-left: 20px;
+    display: block;
+}
+
+
+#listas-cursos-trabalho{
+    width: 40vw;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    border-bottom: 1px solid gray;
+    
+}
+
+#listas-cursos-trabalho ol{
+    padding-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#conhecimentos{
+    width: 40vw;
+    margin-top: 30px;
+    margin-left: 30px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+}
+
+#conhecimentos ul{
+    padding-left: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

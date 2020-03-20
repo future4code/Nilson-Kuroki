@@ -2,12 +2,13 @@
     text-align: center;
     color: gray;
     margin-top: 20px;
+    font-size: 40px;
 }
-
-
 
 #lista {
     margin-left: 40%;
     margin-right: 40%;
     border: 1px solid gray;
+    list-style-type: none;
 }
+

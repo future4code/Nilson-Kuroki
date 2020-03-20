@@ -1,0 +1,30 @@
+#estoque{
+    text-align: center;
+    color: gray;
+    margin-top: 60px;
+    font-size: 40px;
+}
+
+form{display: inline-block;
+    text-align: center;
+    margin-top: 15pxpx;
+    padding: 90px;
+    border: 2px solid gray;
+}
+
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input{
+    background-color: rgba(255, 255, 255, 0.774);
+    width: 200px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+}
+
+button{
+    background-color: rgba(255, 255, 255, 0.774);
+    padding: 2px 10px 2px 10px;
+    text-align: center;
+}

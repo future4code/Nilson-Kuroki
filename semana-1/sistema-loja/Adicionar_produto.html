@@ -3,23 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="pagina-inicial.css">
+    <link rel="stylesheet" type="text/css" href="adicionar-produto.css">
     <title>Document</title>
 </head>
 <body>
-    <h2>Estoque</h2>
-    <form>
-        <label for="foto">Foto:</label><br>
+    <img src="logo.png" alt="logo" class="logo">
+    <h1 class="nome_loja">Gatitos</h1>
 
-        <label for="descricao">Descrição:</label>
+    <ul class="menu">
+        <li><a href="Pagina_inicial.html">Pagina Inicial</a></li>
+        <li><a href="Funcionários.html">Funcionários</a></li>
+        <li><a href="Controle_de_estoque.html">Controle de Estoque</a></li>
+    </ul>
+
+
+    <h2 id="estoque">Estoque</h2>
+    
+    <form>
+        
+
+        <label for="descricao">Descrição:</label><br>
         <input type="text" name="descricao" id="descricao"><br>
 
-        <label for="preco">Preço:</label>
+        <label for="preco">Preço:</label><br>
         <input type="text" name="preco" id="preco"><br>
 
-        <label for="quantidade">Quantidade:</label>
+        <label for="quantidade">Quantidade:</label><br>
         <input type="text" name="quantidade" id="quantidade"><br>
         
         <button type="submit">Enviar</button>
     </form>
+    <div class="footer">
+        <p>Direitos Reservados  Nilson/2020</p>
+    </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
     margin: 0px;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
+/* Daqui para baixo estou tratando do menu e da parte superior dele, foi usado em todas as paginas */
 #foto-perfil{
     display: block;
     margin-left: auto;
@@ -43,6 +43,8 @@
     background-image: URL('capa.jpg');
     background-size: 2000px;
 }
+
+/*Daqui para baixo é o conteúdo da pagina*/
 #sobre-mim{
     text-align: center;
 }
@@ -54,6 +56,8 @@
 #sobre-mim p{
     font-size: 25px;
 }
+
+/* criação do footer de todas as paginas*/
 .footer-not-scroll {
     width: 100%;
     text-align: center;

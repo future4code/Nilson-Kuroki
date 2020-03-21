@@ -1,0 +1,10 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+form{
+    text-align: center;
+    border: 2 solid #060026;
+}

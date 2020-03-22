@@ -4,7 +4,42 @@
     font-family: 'Baloo Chettan 2', cursive;
 }
 
+#divCenter{
+    text-align: center;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
 form{
     text-align: center;
-    border: 2px solid #060026;
+    width: 400px;
+    height: 280px;
+    width: auto;
+    border: 2px solid black;
+    margin-left: 400px;
+    margin-right: 400px;
+}
+input{
+    width: 300px;
+}
+
+#text-texto{
+    height: 100px;
+    
+}
+
+button{
+    margin-top: 10px;
+    width: 304px;
+    color: white;
+    background-color: #060026;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    border: none;
+}
+
+button:hover{
+    color: red;
+    border: 1px solid red;
 }

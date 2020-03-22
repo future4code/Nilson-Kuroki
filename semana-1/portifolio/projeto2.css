@@ -1,0 +1,30 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Baloo Chettan 2', cursive;
+}
+
+#nome-projeto{
+    text-align: center;
+    margin-top: 20px;
+}
+.img-site2{
+    margin-top: 20px;
+    margin-bottom: 40px;
+    max-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.texto{
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.texto p{
+    text-align: justify;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 80px;
+}

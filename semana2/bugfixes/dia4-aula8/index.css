@@ -34,8 +34,9 @@ div>p:first-child {
     display: inline;
 }
 
-div img {
-    background: black;
+.container-do-search img {
+    width: 15px;
+    height: 15px;
 }
 
 .botao-amarelo {

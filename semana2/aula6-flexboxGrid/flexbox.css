@@ -1,0 +1,97 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+/* PRIMEIRO CONTAINER */
+#container{
+    display: flex;
+    height: 5vh;
+}
+#header{
+    background-color:#2ECC40;
+    
+    width: 30vw;
+    align-items: center;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+#menu{
+    background-color: #FFDC00;
+    
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* SEGUNDO CONTAINER 2 */
+#container2{
+    display: flex;
+    max-width: 100vw;
+    height: 50vh;
+}
+
+#content1{
+    
+    background-color: #F012BE;
+    width: 100vw;
+    height: 50vh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TERCEIRO CONTAINER 3 */
+#container3{
+    display: flex;
+    max-height: 40vh;
+}
+
+#content2{
+    background-color: #0074D9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vw;
+    height: 40vh;
+}
+
+#container4{
+    display: flex;
+    width: 50vw;
+    align-items:flex-end;
+    flex-direction: column;
+}
+#imagem{
+    background-color: #FF4136;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    height: 20vh;
+}
+#extra{
+    background-color: #01FF70;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25vw;
+    height: 20vh;
+    
+}
+
+#container5{
+    display: flex;
+    width: 100vw;
+    height: 5vh;;
+}
+#footer{
+    display: flex;
+    width: 100vw;
+    height: 5vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #B10DC9;
+}

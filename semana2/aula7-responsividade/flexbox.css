@@ -1,0 +1,117 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container-geral{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+.item-0{
+    width: 100vw;
+    height: 5vh;
+    background-color: red;
+}
+
+.container-123456{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 30vh;
+    flex-wrap: wrap;
+}
+.container-91011{
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 15vh;
+}
+
+.item-1, .item-2, .item-3, .item-4, .item-5, .item-6, .item-9, .item-10, .item-11{
+    border: 1px solid black;
+    width: 30vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-1, .item-4{
+    background-color: blue;
+}
+.item-2, .item-5{
+    background-color: yellow;
+}
+.item-3, .item-6{
+    background-color: green;
+}
+.container-78{
+    display: flex;;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100vw;
+    height: 40vh;
+    align-items: center;
+}
+
+.item-7, .item-8{
+    width: 47vw;
+    height: 40vh;
+    border: 1px solid black;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+
+
+
+
+@media screen and (max-width: 800px){
+
+    .container-123456{
+        height: 44vh;
+    }
+
+    .item-1, .item-2, .item-4, .item-5 {
+        width: 45vw;
+        height: 9vh;
+    }
+    .item-3, .item-6{
+        width: 95vw;
+        height: 9vh;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .container-123456{
+        height: 60vh;
+    }
+    .item-1, .item-2, .item-4, .item-5.item-1, .item-2, .item-4, .item-5{
+        width: 95vw;
+    }
+    .container-78{
+        flex-wrap: wrap;
+        height: 20vh;
+    }
+    .item-7, .item-8{
+        width: 95vw;
+        height: 9vh;
+    }
+    .container-91011{
+        flex-wrap: wrap;
+        height: 30vh;
+    }
+    .item-9, .item-10, .item-11{
+        width: 95vw;
+        height: 9vh;
+    }
+}

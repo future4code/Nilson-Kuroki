@@ -68,15 +68,15 @@
     color: white;
 }
 .item-9{
-    background-color: blue;
+    
     grid-area: 5/1/5/3;
 }
 .item-10{
-    background-color: yellow;
+    
     grid-area: 5/3/5/5;
 }
 .item-11{
-    background-color: green;
+
     grid-area: 5/5/5/7;
 }
 

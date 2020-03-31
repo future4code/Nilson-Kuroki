@@ -1,0 +1,18 @@
+1. 	a. false
+	b. false
+	c. true
+	d. false
+	e. boolean
+
+2. 	
+
+a. R: Array é um vetor
+b. R: 0
+c. R: console.log(array.lenght)
+d. R:	I. undefined
+	II. null
+	III. 11
+	IV. 3 e 4
+	V. 19 e 9
+	VI.  3
+	VII.  1

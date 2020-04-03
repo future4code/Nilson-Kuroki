@@ -50,33 +50,52 @@ if(confirm("Quer iniciar uma nova rodada?")){
       "\nDeseja comprar mais uma carta?")){
          usuarioTexto.push(carta.texto)
          usuarioValor.push(carta.valor)
+         
+         pontuacaoUsuario = 0
          for(let valor1 of usuarioValor){
             pontuacaoUsuario += Number(valor1)
          }
+         pontuacaoComputador = 0
          for(let valor2 of computadorValor){
             pontuacaoComputador += Number(valor2)
          }
          
          if(pontuacaoUsuario >= 21){
-            
             break;
          }
    }
-   while(pontuacaoComputador <= pontuacaoComputador && pontuacaoUsuario <= 21){
+
+   while(pontuacaoComputador <= pontuacaoUsuario && pontuacaoUsuario <= 21){
       computadorTexto.push(carta.texto)
       computadorValor.push(carta.valor)
+      pontuacaoUsuario = 0
+      for(let valor1 of usuarioValor){
+         pontuacaoUsuario += Number(valor1)
+      }
+      pontuacaoComputador = 0
+      for(valor2 of computadorValor){
+         pontuacaoComputador += Number(valor2)
+      }
    }
-   
+   console.log("Usuario "+pontuacaoUsuario+"Computador"+pontuacaoComputador)
    if(pontuacaoUsuario > 21){
-   alert("Suas cartas são "+usuarioTexto+". Sua pontuação é "+pontuacaoUsuario+".\n"+
-   "As cartas do computador são "+computadorTexto+". A pontuação do computador é "+pontuacaoComputador+".\n"
-   +"O computador ganhou!")
-   }else if(pontuacaoUsuario <= 21 && pontuacaoUsuario > pontuacaoComputador){
       alert("Suas cartas são "+usuarioTexto+". Sua pontuação é "+pontuacaoUsuario+".\n"+
-   "As cartas do computador são "+computadorTexto+". A pontuação do computador é "+pontuacaoComputador+".\n"
-   +"Você ganhou!")
+      "As cartas do computador são "+computadorTexto+". A pontuação do computador é "+pontuacaoComputador+".\n"
+      +"O computador ganhou!")
+   }else if (pontuacaoUsuario < pontuacaoComputador && pontuacaoUsuario <= 21 && pontuacaoComputador <= 21){
+      alert("Suas cartas são "+usuarioTexto+". Sua pontuação é "+pontuacaoUsuario+".\n"+
+      "As cartas do computador são "+computadorTexto+". A pontuação do computador é "+pontuacaoComputador+".\n"
+      +"O computador ganhou!")
+   }else if(pontuacaoUsuario === 21 && pontuacaoComputador === 21){
+      alert("Suas cartas são "+usuarioTexto+". Sua pontuação é "+pontuacaoUsuario+".\n"+
+      "As cartas do computador são "+computadorTexto+". A pontuação do computador é "+pontuacaoComputador+".\n"
+      +"Ouvi um empate!")
+   }else{
+      alert("Suas cartas são "+usuarioTexto+". Sua pontuação é "+pontuacaoUsuario+".\n"+
+      "As cartas do computador são "+computadorTexto+". A pontuação do computador é "+pontuacaoComputador+".\n"
+      +"Voce ganhou!")
    }
+
 }else{
    console.log("O jogo acabou")   
 }
-

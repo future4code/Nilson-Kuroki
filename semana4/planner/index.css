@@ -1,0 +1,24 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    height: 10vw;
+    align-items: center;
+}
+menu{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 10vw, 90vw;
+    height: 80vh;
+}
+#container{
+    grid-area: 1/1/1/8/1;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+}

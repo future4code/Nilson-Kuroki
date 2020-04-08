@@ -38,6 +38,11 @@ function riscar(tudo){
 }
 
 function limpar(){
-    segundaFeira.value = ""
-    tercaFeira.value = ""
+    segundaFeira.innerHTML = ""
+    tercaFeira.innerHTML = ""
+    quartaFeira.innerHTML = ""
+    quintaFeira.innerHTML = ""
+    sextaFeira.innerHTML = ""
+    sabado.innerHTML = ""
+    domingo.innerHTML = ""
 }

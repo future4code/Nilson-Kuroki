@@ -1,6 +1,6 @@
 *{
     padding: 0;
-    margin: 0;
+    
 }
 #container{
     display: flex;
@@ -13,6 +13,10 @@ menu{
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: 10vw, 90vw;
     height: 80vh;
+    gap: 2vh;
+}
+article{
+    border: 2px solid black
 }
 #container{
     grid-area: 1/1/1/8/1;

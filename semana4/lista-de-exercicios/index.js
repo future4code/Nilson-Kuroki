@@ -14,5 +14,20 @@ são declarados 3 arrays um chamado numeros que possue valores dentro e os outro
 valores encontrados no vetor numero for par, essse valor será inteirado no array1, caso seja impar
 será parte do array2
 
+exercicio 4
+é declarado um vetor com varios valores tipo number, mais dois valores do tipo let com os nomes de 
+numero1 e numero2, apos isso entra em um laço(for) que percorre todo o vetor numeros, si o elemento
+numero do vetor for menor que a variavel numero1 então numero1 recebe numero e if numero maior numero2
+entao numero2 recebe numero,  apos disso é printado no console
+
+exercicios de logica de promgramação
+
+exercicio 1
+a) false
+b) false
+c) true
+d) true
+e) false
+
 
 */

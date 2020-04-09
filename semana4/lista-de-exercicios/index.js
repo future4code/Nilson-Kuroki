@@ -29,5 +29,22 @@ c) true
 d) true
 e) false
 
+exercicio 2
 
+ele executa, porem nao necessariamente vai vir numeros pares, mas sim I multiplicado por 2, ate que
+saia do laço.
+
+const quantidadeDeNumerosPares 
+let i = 0
+let somador = 0
+while(i <quantidadeDeNumerosPares){
+    if(somador%2 === 0){
+        console.log(somador)
+        somador ++
+        i++
+    }else{
+        somador ++
+    }
+}
 */
+

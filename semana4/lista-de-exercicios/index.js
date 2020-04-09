@@ -46,5 +46,23 @@ while(i <quantidadeDeNumerosPares){
         somador ++
     }
 }
+
+exercicio 3
+
 */
 
+function trigonometria(a,b,c){
+    if(a===b && b==c){
+        return console.log("triângulo Equilátero")
+    }
+    if(a===b && a != c ){
+        return console.log("triângulo Isóceles")
+    }else if(b==c && b != a ){
+        return console.log("triângulo Isóceles")
+    }else if(a==c && a!==b){
+        return console.log("triângulo Isóceles")
+    }
+    if(a !=b && b != c && a != c){
+        return console.log("trinagulo Escaleno")
+    }
+}

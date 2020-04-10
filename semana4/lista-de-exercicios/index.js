@@ -1,3 +1,5 @@
+//AULA 14
+
 /*leitura de codigo
 exercicio 1
 mostra um codigo de conversão de dinheiro de dolar para real, uma function
@@ -90,3 +92,36 @@ function saidaDeValores(valorA, valorB){
 }
 */
 
+//AULA 15
+
+/*
+exercicios de funções
+exercicio 1
+const array = [10,13,12,15,14]
+function segundoMaiorESegundoMenorValor(array){
+    let maiorValor = 0
+    let anteriorMaiorValor = 0
+    let menorValor = 0
+    let anteriorMenorValor = 0
+    for(let valores of array){
+        if(valores > maiorValor ){
+            anteriorMaiorValor = maiorValor
+            maiorValor = valores   
+        }else if(valores > anteriorMaiorValor){
+            anteriorMaiorValor = valores
+        }
+    }
+    menorValor = maiorValor
+    for (let valores of array){
+        if(valores < menorValor ){
+            anteriorMenorValor = menorValor
+            menorValor = valores   
+        }else if(valores < anteriorMenorValor){
+            anteriorMenorValor = valores
+        }
+    }
+    return "O segundo maior valor é "+anteriorMaiorValor+" e o segundo menor valor é "+ anteriorMenorValor
+}
+segundoMaiorESegundoMenorValor(array)
+
+*/

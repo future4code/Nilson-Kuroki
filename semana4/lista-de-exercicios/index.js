@@ -165,5 +165,23 @@ const filmeFavorito = {
 console.log("Venha assistir ao filme"+filmeFavorito.titulo+
             ", de "+filmeFavorito.ano+", Dirigido por "+filmeFavorito.diretor+
             " e estrelado por "+filmeFavorito.atores)
+
+exercicio 4
+let pessoa = {
+    nome: "Nilson Issamu Kuroki",
+    idade: 21,
+    email: "nilsonkurokii@gmail.com",
+    endereco: "Rua Onde Judas Bateu as Botas"
+}
+
+function anonimizarPessoa(objetoPessoa){
+    const novoObjeto = {
+        nome: "ANÔNIMO",
+        idade: objetoPessoa.idade,
+        email: objetoPessoa.email,
+        endereco: objetoPessoa.endereco
+    }
+    return novoObjeto
+}
 */
 

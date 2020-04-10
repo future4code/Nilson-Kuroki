@@ -155,5 +155,15 @@ function criaRetangulo (lado1, lado2){
 }
 
 exercicio 3
+const filmeFavorito = {
+    titulo: "Harry Potter",
+    ano: 2007,
+    diretor: "David Yates",
+    atores: ["Daniel RadCliffe","Rupert Grint", "Emma Watson"]
+}
 
+console.log("Venha assistir ao filme"+filmeFavorito.titulo+
+            ", de "+filmeFavorito.ano+", Dirigido por "+filmeFavorito.diretor+
+            " e estrelado por "+filmeFavorito.atores)
 */
+

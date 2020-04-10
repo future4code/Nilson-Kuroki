@@ -48,9 +48,6 @@ while(i <quantidadeDeNumerosPares){
 }
 
 exercicio 3
-
-*/
-
 function trigonometria(a,b,c){
     if(a===b && b==c){
         return console.log("triângulo Equilátero")
@@ -66,3 +63,30 @@ function trigonometria(a,b,c){
         return console.log("trinagulo Escaleno")
     }
 }
+
+
+exercicio 4
+function saidaDeValores(valorA, valorB){
+    console.log("Foi dado os valores: "+valorA+", "+valorB)
+
+    if(valorA > valorB){
+        console.log("O maior é: "+ valorA)
+    }else if(valorB > valorA){
+        console.log("O maior é: "+ valorB)
+    }
+    if(valorA % valorB === 0){
+        valorA +"é divisivel por "+ valorB
+    }else{
+        valorA +"não é divisivel por "+ valorB
+    }
+    let somaAcomB = 0
+    if(valorA > 0){
+        somaAcomB = valorB - valorA
+        console.log("A diferença entre eles é "+somaAcomB)
+    }else{
+        somaAcomB = valorA - valorB
+        console.log("A diferença entre eles é "+somaAcomB)
+    }
+}
+*/
+

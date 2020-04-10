@@ -124,4 +124,22 @@ function segundoMaiorESegundoMenorValor(array){
 }
 segundoMaiorESegundoMenorValor(array)
 
+//exercicio 2
+
+const alerta = function(){
+    alert("Hello Future4")
+}
+const resultado = alerta()
+console.log(resultado)
+*/
+
+/*
+Exercicios de Objetos
+
+exercicio 1
+Objetos são como se fosse gaveta que guardasse atributos de 
+um objeto da vida real, como um pokemon, guardando seu nome,
+tipo, vidamaxima etc...
+arrays são usados para guardar um unico atributo, ja o objeto,
+pode ser guardado todos os atributos de um objeto
 */

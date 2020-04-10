@@ -142,4 +142,18 @@ um objeto da vida real, como um pokemon, guardando seu nome,
 tipo, vidamaxima etc...
 arrays são usados para guardar um unico atributo, ja o objeto,
 pode ser guardado todos os atributos de um objeto
+
+exercicio 2
+function criaRetangulo (lado1, lado2){
+    const retangulo = {
+        largura: lado1,
+        altura: lado2,
+        perimetro: 2 * (lado1 + lado2),
+        area: lado1 * lado2
+    }
+    return retangulo
+}
+
+exercicio 3
+
 */

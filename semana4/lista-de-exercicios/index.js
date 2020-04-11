@@ -31,7 +31,7 @@ c) true
 d) true
 e) false
 
-exercicio 2
+//exercicio 2
 
 ele executa, porem nao necessariamente vai vir numeros pares, mas sim I multiplicado por 2, ate que
 saia do laço.
@@ -49,7 +49,7 @@ while(i <quantidadeDeNumerosPares){
     }
 }
 
-exercicio 3
+//exercicio 3
 function trigonometria(a,b,c){
     if(a===b && b==c){
         return console.log("triângulo Equilátero")
@@ -67,7 +67,7 @@ function trigonometria(a,b,c){
 }
 
 
-exercicio 4
+//exercicio 4
 function saidaDeValores(valorA, valorB){
     console.log("Foi dado os valores: "+valorA+", "+valorB)
 
@@ -95,8 +95,8 @@ function saidaDeValores(valorA, valorB){
 //AULA 15
 
 /*
-exercicios de funções
-exercicio 1
+//exercicios de funções
+//exercicio 1
 const array = [10,13,12,15,14]
 function segundoMaiorESegundoMenorValor(array){
     let maiorValor = 0
@@ -134,16 +134,16 @@ console.log(resultado)
 */
 
 /*
-Exercicios de Objetos
+//Exercicios de Objetos
 
-exercicio 1
+//exercicio 1
 Objetos são como se fosse gaveta que guardasse atributos de 
 um objeto da vida real, como um pokemon, guardando seu nome,
 tipo, vidamaxima etc...
 arrays são usados para guardar um unico atributo, ja o objeto,
 pode ser guardado todos os atributos de um objeto
 
-exercicio 2
+//exercicio 2
 function criaRetangulo (lado1, lado2){
     const retangulo = {
         largura: lado1,
@@ -154,7 +154,7 @@ function criaRetangulo (lado1, lado2){
     return retangulo
 }
 
-exercicio 3
+//exercicio 3
 const filmeFavorito = {
     titulo: "Harry Potter",
     ano: 2007,
@@ -166,7 +166,7 @@ console.log("Venha assistir ao filme"+filmeFavorito.titulo+
             ", de "+filmeFavorito.ano+", Dirigido por "+filmeFavorito.diretor+
             " e estrelado por "+filmeFavorito.atores)
 
-exercicio 4
+//exercicio 4
 let pessoa = {
     nome: "Nilson Issamu Kuroki",
     idade: 21,
@@ -184,4 +184,24 @@ function anonimizarPessoa(objetoPessoa){
     return novoObjeto
 }
 */
+/*
+//AULA 16
+//Exercicios de funções de array
 
+//exercicio 1
+3 Maneiras de se percorrer um vetor é através do for...of, for e while
+
+for(let i; i>array.lenght; i++){
+    condição
+}
+for(let numero of numeros){
+    console.log(numero)
+}
+while(i<array.length){
+    conseole.log(array[i])
+    i++
+}
+
+exercicio 2 A
+
+*/

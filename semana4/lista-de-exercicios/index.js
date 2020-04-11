@@ -202,7 +202,7 @@ while(i<array.length){
     i++
 }
 
-exercicio 2 A
+exercicio 2 A e B
 const pessoas = [
 	{ nome: "Pedro", idade: 20 },
 	{ nome: "João", idade: 10 },
@@ -221,4 +221,31 @@ const criancasEAdolecentes = pessoas.filter((pessoa, index, array)=>{
     }
     return false
 })
+
+exercicio 3 A
+let array = [1, 2, 3, 4, 5, 6]
+array.forEach((valores, index, array)=>{
+    valores = valores*2
+})
+
+exercicio 3 B
+const array = [1, 2, 3, 4, 5, 6]
+array.forEach((valores, array, index)=>{
+    valores = valores * 3
+    valores = String(valores)
+    console.log(valores)
+})
+
+exercicio 3 C
+const array = [1, 2, 3, 4, 5, 6]
+
+array.forEach((valor, index, array)=>{
+    if(valor%2 == 0){
+        valor = `${valor} é par`
+    }else{
+        valor = `${valor} é impar`
+    }
+    console.log(valor)
+})
 */
+

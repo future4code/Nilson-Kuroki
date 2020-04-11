@@ -189,7 +189,7 @@ function anonimizarPessoa(objetoPessoa){
 //Exercicios de funções de array
 
 //exercicio 1
-3 Maneiras de se percorrer um vetor é através do for...of, for e while
+//3 Maneiras de se percorrer um vetor é através do for...of, for e while
 
 for(let i; i>array.lenght; i++){
     condição
@@ -202,7 +202,7 @@ while(i<array.length){
     i++
 }
 
-exercicio 2 A e B
+//exercicio 2 A e B
 const pessoas = [
 	{ nome: "Pedro", idade: 20 },
 	{ nome: "João", idade: 10 },
@@ -222,13 +222,13 @@ const criancasEAdolecentes = pessoas.filter((pessoa, index, array)=>{
     return false
 })
 
-exercicio 3 A
+//exercicio 3 A
 let array = [1, 2, 3, 4, 5, 6]
 array.forEach((valores, index, array)=>{
     valores = valores*2
 })
 
-exercicio 3 B
+//exercicio 3 B
 const array = [1, 2, 3, 4, 5, 6]
 array.forEach((valores, array, index)=>{
     valores = valores * 3
@@ -236,7 +236,7 @@ array.forEach((valores, array, index)=>{
     console.log(valores)
 })
 
-exercicio 3 C
+//exercicio 3 C
 const array = [1, 2, 3, 4, 5, 6]
 
 array.forEach((valor, index, array)=>{
@@ -247,8 +247,8 @@ array.forEach((valor, index, array)=>{
     }
     console.log(valor)
 })
-*/
 
+//exercicio 4 a
 const pessoas = [
 	{ nome: "Paula", idade: 12, altura: 1.8},
 	{ nome: "João", idade: 20, altura: 1.3},
@@ -263,6 +263,8 @@ const permissaoParaEntrar = pessoas.filter((pessoa, index, array)=>{
     }
     return false
 })
+
+//exercicio 4 B
 const semPermissaoParaEntrar = pessoas.filter((pessoa, index, array)=>{
     if(pessoa.altura < 1.5){
         return true
@@ -275,3 +277,35 @@ const semPermissaoParaEntrar = pessoas.filter((pessoa, index, array)=>{
     }
     return false
 })
+
+//exercicio 5
+
+const consultas = [
+	{ nome: "João", genero: "masculino", cancelada: true, dataDaConsulta: "01/10/2019" },
+	{ nome: "Pedro", genero: "masculino", cancelada: false, dataDaConsulta: "02/10/2019" },
+	{ nome: "Paula", genero: "feminino", cancelada: true, dataDaConsulta: "03/11/2019" },
+	{ nome: "Márcia", genero: "feminino", cancelada: false, dataDaConsulta: "04/11/2019" }
+]
+
+const emailLembrete = consultas.map((consulta, index, array) =>{
+    if(consulta.genero == "masculino"){
+        consulta.genero = ["Senhor", "lembra-lo"]
+    }
+    if(consulta.genero == "feminino"){
+        consulta.genero = ["Senhora", "lembra-la"]
+    }
+    return `Olá, ${consulta.genero[0]} ${consulta.nome}. Estamos enviando esta mensagem para ${consulta.genero[1]} da sua consulta no dia ${consulta.dataDaConsulta}. Por favor, acuse o recebimento deste e-mail.`
+})
+
+const emailCancelamento = consultas.map((consulta, index, array) =>{
+    if(consulta.genero == "masculino"){
+        consulta.genero = ["Senhor", "lembra-lo"]
+    }
+    if(consulta.genero == "feminino"){
+        consulta.genero = ["Senhora", "lembra-la"]
+    }
+    return `Olá, ${consulta.genero[0]} ${consulta.nome}. Infelizmente, sua consulta marcada para o dia ${consulta.dataDaConsulta} foi cancelada. Se quiser, pode entrar em contato conosco para remarcá-la`
+})
+
+*/
+

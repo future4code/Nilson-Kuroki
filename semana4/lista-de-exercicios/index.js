@@ -203,5 +203,22 @@ while(i<array.length){
 }
 
 exercicio 2 A
-
+const pessoas = [
+	{ nome: "Pedro", idade: 20 },
+	{ nome: "João", idade: 10 },
+	{ nome: "Paula", idade: 12 },
+	{ nome: "Artur", idade: 89 } 
+]
+const adultos = pessoas.filter((pessoa, idx, arry) => {
+    if(pessoa.idade >= 20){
+        return true
+    }
+    return false
+})
+const criancasEAdolecentes = pessoas.filter((pessoa, index, array)=>{
+    if(pessoa.idade < 20){
+        return true
+    }
+    return false
+})
 */

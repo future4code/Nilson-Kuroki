@@ -31,6 +31,7 @@ c) true
 d) true
 e) false
 
+
 //exercicio 2
 
 ele executa, porem nao necessariamente vai vir numeros pares, mas sim I multiplicado por 2, ate que
@@ -49,6 +50,7 @@ while(i <quantidadeDeNumerosPares){
     }
 }
 
+
 //exercicio 3
 function trigonometria(a,b,c){
     if(a===b && b==c){
@@ -65,8 +67,6 @@ function trigonometria(a,b,c){
         return console.log("trinagulo Escaleno")
     }
 }
-
-
 //exercicio 4
 function saidaDeValores(valorA, valorB){
     console.log("Foi dado os valores: "+valorA+", "+valorB)
@@ -137,6 +137,7 @@ console.log(resultado)
 //Exercicios de Objetos
 
 //exercicio 1
+/*
 Objetos são como se fosse gaveta que guardasse atributos de 
 um objeto da vida real, como um pokemon, guardando seu nome,
 tipo, vidamaxima etc...
@@ -325,3 +326,4 @@ contas.forEach((conta, index, array)=> {
     console.log(conta)
 })
 */
+

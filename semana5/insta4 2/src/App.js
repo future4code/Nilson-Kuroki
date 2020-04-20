@@ -7,7 +7,7 @@ class App extends React.Component {
     pubs: [
       {
       nomeUsuario:'paulinha',
-      fotoUsuario:'https://picsum.photos/50/50?a=1',
+      fotoUsuario: 'https://picsum.photos/200/150?a=2',
       fotoPost:'https://picsum.photos/200/150?a=2'
       },
       {
@@ -28,8 +28,8 @@ class App extends React.Component {
       return(
         <Post
           nomeUsuario = {pub.nomeUsuario}
-          fotosUsuario = {pub.fotosUsuario}
-          fotosPost = {pub.fotoPost}
+          fotoUsuario = {pub.fotoUsuario}
+          fotoPost = {pub.fotoPost}
         />
       )
     })

@@ -66,7 +66,7 @@ class App extends React.Component {
           ...id,
           completa: !item.completa
         }
-        return novaLista
+        return novoPost
       }else {
         return item
       }

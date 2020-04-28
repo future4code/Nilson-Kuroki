@@ -20,6 +20,9 @@ class App extends React.Component {
     emailValue: ""
   }
 
+  componentDidMount(){
+    this.pegaUsuario()
+  }
   onChangeNome = (event) => {
     this.setState({nameValue: event.target.value})
   }
@@ -37,10 +40,22 @@ class App extends React.Component {
       headers:{
         authorization: 'Nilson-Kuroki-Julian'
       }
-    }).then((usuario)=> {
-      this.setState({usuarios: usuario})
-    }).catch(()=>{
+    }).then((resposta)=> {
+      console.log("uhu deu certo!", resposta.data)
+    }).catch((resposta)=>{
+      console.log("Algo deu errado", resposta)
+    })
+  }
 
+  pegaUsuario = () =>{
+    axios.get('https://us-central1-labenu-apis.cloudfunctions.net/labenusers/users',{
+      headers:{
+        authorization: 'Nilson-Kuroki-Julian'
+      }
+    }).then((resposta) => {
+      this.setState({usuarios: resposta.data})
+    }).catch((resposta)=>{
+      console.log("deu erro")
     })
   }
   render(){
@@ -52,6 +67,12 @@ class App extends React.Component {
           <label>E-mail:</label>
           <input value = {this.state.emailValue} onChange = {this.onChangeEmail}/>
           <button onClick={this.criarUsuario}>Enviar</button>
+
+          <div>
+            {this.state.usuarios.map((usuario)=>{
+              return <p>{usuario.name}</p>
+            })}
+          </div>
         </ContainerCadastro>
     </div>
       

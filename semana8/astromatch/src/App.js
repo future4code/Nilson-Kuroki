@@ -5,7 +5,7 @@ import {Matchs} from './components/Matchs'
 export default function App() {
   return (
     <div>
-      <TelaInicial/>
+      <TelaInicial />
     </div>
   );
 }

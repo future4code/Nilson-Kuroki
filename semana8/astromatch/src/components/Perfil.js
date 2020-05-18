@@ -5,7 +5,24 @@ import Fab from '@material-ui/core/Fab';
 import Typography from '@material-ui/core/Typography';
 import axios from 'axios'
 import CardMedia from '@material-ui/core/CardMedia';
+import CurtirPreto from '@material-ui/icons/Favorite'
+import Negado from '@material-ui/icons/Clear'
+import {createMuiTheme, MuiThemeProvider} from '@material-ui/core'
 
+const myTheme = createMuiTheme({
+    palette: {
+        primary: {
+            main: "#00FF00"
+        },
+        secondary: {
+            main: "#FF0000"
+        }
+    }
+})
+
+const FabStyled = styled(Fab)`
+    
+`
 const CardStyled = styled(Card)`
     border: 1px solid black;
     width: 380px;
@@ -73,6 +90,7 @@ export function Perfil(){
     }
     return(
         <div>
+        <MuiThemeProvider theme={myTheme}>
             <CardStyled>
                 <CardMediaStyle
                     image={perfil.photo}
@@ -82,9 +100,10 @@ export function Perfil(){
                 <Typography variant="p">{perfil.bio}</Typography>
             </CardStyled>
             <ContainerButtons>
-                <Fab onClick={negarChamego}>Feio</Fab>
-                <Fab onClick={curtir}>Cool</Fab>
+                <FabStyled onClick={negarChamego}><Negado color="secondary"/></FabStyled>
+                <FabStyled onClick={curtir}><CurtirPreto color="primary" /></FabStyled>
             </ContainerButtons>
+        </MuiThemeProvider>
         </div>
     )
 }

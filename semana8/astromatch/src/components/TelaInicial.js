@@ -24,6 +24,7 @@ const TelaInicialContainer = styled.div`
 `
 const Header = styled.div`
     display: flex;
+    flex-direction: row-reverse;
     border-bottom: 1px solid black;
     height: 10%;
     width: 100%;
@@ -50,10 +51,10 @@ export function TelaInicial(props){
         <ContainerGeral>
             <TelaInicialContainer>
                 <Header>
-                    <p>astroMatch</p>
-                    <Button onClick= {mudarPagina}>
+                <Button onClick= {mudarPagina}>
                         <Trocar/>
                     </Button>
+                    <p>astroMatch</p>
                 </Header>
                 {tela === "TelaInicial"? (<Perfil/>): (<Matchs/>)}
 

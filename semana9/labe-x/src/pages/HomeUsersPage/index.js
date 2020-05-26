@@ -2,10 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import logo from '../../image/Logo.png'
 import Paper from '@material-ui/core/Paper';
+import {useRequestData} from '../../customHooks/useRequestData'
+import Card from '@material-ui/core/Card';
+import Button from '@material-ui/core/Button';
 
 const ContainerHomePage = styled.div`
     display: flex;
-    height: 100vh;
+    height: 100%;
     background-color: #5d66ea; 
     align-items: center;
     flex-direction: column;
@@ -15,18 +18,48 @@ const ImgLogo = styled.img`
     margin-bottom: 20px;
 `
 const PaperStyled = styled(Paper)`
-    width: 50vw;
+    width: 65vw;
     display: flex; 
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 20px;
+`
+const CardStyled = styled(Card)`
+    margin: 20px;
+    min-width: 200px;
+    width: 26%;
+    min-height: 210px;
+    padding: 10px;
+    border: 1px solid orange ;
+`
+const ContainerButton = styled.div`
+    display: flex;
+    justify-content: center;
 `
 
 const HomePage = props => {
+    const viagens = useRequestData('https://us-central1-labenu-apis.cloudfunctions.net/labeX/nilson-julian/trips', [])
+
+
+
     return (
         <ContainerHomePage>
             <ImgLogo src={logo} alt="logo"/>
-            <PaperStyled>
-                fsafsa
+            <PaperStyled>   
+
+                {viagens.map(viagem=>{
+                    return (
+                        <CardStyled>
+                                <h3>{viagem.planet}</h3>
+                                <p>{viagem.name}</p>
+                                <p><b>duration:</b> {viagem.durationInDays} days</p>
+                                <p><b>data:</b> {viagem.date}</p>
+                                <ContainerButton>
+                                    <Button color="primary"variant="contained">cadastre-se!</Button>
+                                </ContainerButton>
+                        </CardStyled>
+                    )
+                })}
             </PaperStyled>
         </ContainerHomePage>
     )

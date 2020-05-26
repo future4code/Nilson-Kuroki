@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import logo from '../../image/Logo.png'
 import Paper from '@material-ui/core/Paper';
+import {useCheckLogin} from '../../customHooks/useCheckLogin'
 
 const ContainerListusersPage = styled.div`
     height: 100vh;
@@ -19,6 +20,7 @@ const PaperStyled = styled(Paper)`
 `
 
 const ListUsers = props => {
+    useCheckLogin()
     return(
         <ContainerListusersPage>
             <ImgLogo src={logo} alt="logo"/>

@@ -35,6 +35,10 @@ const ContainerDateDay = styled.div`
     width: 100%;
     justify-content: space-around;
 `
+const FormStyled = styled.form`
+    display: flex; 
+    flex-direction: column;
+`
 
 const CreateTrip = props => {
     useCheckLogin()
@@ -65,22 +69,24 @@ const CreateTrip = props => {
        history.goBack()
     }
 
-    
     return(
         <ContainerCreateTripPage>
             <ImgLogo src={logo} alt="logo"/>
             <PaperStyled>
-                
-                <TextField value={name} onChange={onChangeName} id="standard-basic" label="Name"  />
-                <TextField value={planet} onChange={onChangePlanet}id="standard-basic" label="Planet"/>
-                <ContainerDateDay>
-                    <TextField value={date} onChange={onChangeDate}id="date" label="date"/>
-                    <TextField value={durationInDays} onChange={onChangeDurationInDays}id="standard-basic" label="Duration in days"/>
-                </ContainerDateDay>
-                <TextField value={description} onChange={onChangeDescription}id="standard-basic" label="Description"/>
-                <ContainerButton>
-                    <Button onClick={cadastrar} color= "primary" onClick={()=>{}}>Cadastrar</Button>
-                </ContainerButton>
+                <FormStyled>
+                    <TextField name="email"value={name} onChange={onChangeName} label="Name" required />
+                    <TextField value={planet} onChange={onChangePlanet} label="Planet"required/>
+                    <ContainerDateDay>
+                        <TextField value={date} onChange={onChangeDate} type="date" required/>
+                        <TextField value={durationInDays} onChange={onChangeDurationInDays} type="number" label="Duration in days" required/>
+                    </ContainerDateDay>
+                    <TextField value={description} onChange={onChangeDescription}label="Multiline"
+          multiline
+          rows={4} label="Description" required/>
+                    <ContainerButton>
+                        <Button onClick={cadastrar} color= "primary" onClick={()=>{}}>Cadastrar</Button>
+                    </ContainerButton>
+                </FormStyled>
             </PaperStyled>
             
       

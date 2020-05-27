@@ -3,9 +3,8 @@ import LoginPage from './pages/LoginPage'
 import AdminPage from './pages/AdminPage';
 import HomeUsersPage from './pages/HomeUsersPage'
 import HomePage from './pages/HomePage'
-import ChosenTripPage from './pages/ChosenTripPage';
 import CreateTripPage from './pages/CreateTripPage'
-import CadasterTrip from './pages/CadasterTripPage'
+import CadasterTripPage from './pages/CadasterTripPage'
 import ListUsersPage from './pages/ListUsersPage'
 import { Switch, Route, BrowserRouter } from "react-router-dom";
 import {createMuiTheme, MuiThemeProvider} from '@material-ui/core'
@@ -38,17 +37,14 @@ function App() {
           <Route exact path="/admin/create-trip">
             <CreateTripPage/>
           </Route>
-          <Route exact path="/admin/list-users">
+          <Route exact path="/admin/list-users/:idTrip">
             <ListUsersPage/>
           </Route>
           <Route exact path="/home">
             <HomeUsersPage/>
           </Route>
-          <Route exact path="/home/chosen-trip">
-            <ChosenTripPage/>
-          </Route>
-          <Route exact path="/home/chosen-trip/cadaster-trip">
-            <CadasterTrip/>
+          <Route path="/home/cadaster-trip/:idTrip/:nameTrip">
+            <CadasterTripPage/>
           </Route>
         </Switch>
       </BrowserRouter>

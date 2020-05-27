@@ -16,11 +16,13 @@ const ImgLogo = styled.img`
     margin-bottom: 20px;
 `
 const PaperStyled = styled(Paper)`
-    width: 50vw;
+    width: 70vw;
 `
 
 const ListUsers = props => {
     useCheckLogin()
+
+    
     return(
         <ContainerListusersPage>
             <ImgLogo src={logo} alt="logo"/>

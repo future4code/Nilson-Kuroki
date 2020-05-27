@@ -58,8 +58,8 @@ const AdminPage = props =>{
         history.push("/admin/create-trip")
     }
 
-    const goToListUsersPage = () =>{
-        history.push("/admin/list-users")
+    const goToListUsersPage = (id) =>{
+        history.push(`/admin/list-users/${id}`)
     }
 
     return(
@@ -67,10 +67,7 @@ const AdminPage = props =>{
             <ImgLogo src={logo} alt="logo"/>
             <PaperStyled>
             <ContainerButton>
-                <Button variant="contained" color="primary" startIcon={<AirplanemodeActiveIcon/>} onClick={goToListUsersPage}>
-                    check people
-                </Button>
-                <Button variant="contained" color="primary" startIcon={<Mais/>} onClick={goToCreateTripPage}>
+                <Button variant="contained" color="secondary" startIcon={<Mais/>} onClick={goToCreateTripPage}>
                      new trip
                 </Button>
             </ContainerButton>
@@ -83,6 +80,9 @@ const AdminPage = props =>{
                             <p>{viagem.date}</p>
                             <p>{viagem.description}</p>
                         </CardContentStyled>
+                        <Button variant="contained" color="primary" startIcon={<AirplanemodeActiveIcon/>} onClick={()=>{goToListUsersPage(viagem.id)}}>
+                            check people
+                        </Button>
                     </CardStyled>
                     )
             })}

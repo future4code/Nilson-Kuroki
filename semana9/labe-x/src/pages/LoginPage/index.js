@@ -5,8 +5,9 @@ import Paper from '@material-ui/core/Paper';
 import Button from '@material-ui/core/Button';
 import logo from '../../image/logo-padrao.jfif'
 import {useHistory} from 'react-router-dom'
-import {useInputController} from '../../customHooks/useInputController'
+// import {useInputController} from '../../customHooks/useInputController'
 import axios from 'axios'
+import useForm from '../../customHooks/useForm'
 
 const ContainerLoginPage = styled.div`
 background-color: #5d66ea; 
@@ -32,8 +33,12 @@ const TextFieldStyled = styled(TextField)`
 `
 
 const LoginPage = props =>{
-    const [email, onChangeEmail] = useInputController()
-    const [password, onChangePassWord] = useInputController()
+    // const [email, onChangeEmail] = useInputController()
+    // const [password, onChangePassWord] = useInputController()
+    const [form, onChange] = useForm({
+        name: '',
+        password: ''
+    })
     const history = useHistory()
     
     const login = async() => {
@@ -56,14 +61,14 @@ const LoginPage = props =>{
         }
     }
     const handleLogout = () => {
-
+        
     }
 
     return(
         <ContainerLoginPage>
             <PaperStyled variant="outlined">
             <ImgLogo src={logo} alt="logo"/>
-            <TextFieldStyled id="standard-basic" label="Email" value={email} onChange={onChangeEmail} />
+            <TextFieldStyled id="standard-basic" type="email"label="Email" value={email} onChange={onChangeEmail} />
             <TextFieldStyled id="standard-basic" label="Password" type="password" value={password} onChange={onChangePassWord} />
             <Button variant="outlined" color="primary" onClick={login}>
                 Login

@@ -62,6 +62,7 @@ const AdminPage = props =>{
         history.push(`/admin/list-users/${id}`)
     }
 
+    
     return(
         <ContainerAdmin>
             <ImgLogo src={logo} alt="logo"/>

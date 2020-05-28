@@ -5,9 +5,9 @@ import Button from '@material-ui/core/Button'
 import logo from '../../image/Logo.png'
 import Paper from '@material-ui/core/Paper';
 import TextField from '@material-ui/core/TextField';
-import {useInputController} from '../../customHooks/useInputController'
 import axios from 'axios'
 import {useCheckLogin} from '../../customHooks/useCheckLogin'
+import {useForm} from '../../customHooks/useForm'
 
 const ContainerCreateTripPage = styled.div`
     height: 100%;
@@ -42,25 +42,20 @@ const FormStyled = styled.form`
 
 const CreateTrip = props => {
     useCheckLogin()
+    const {form, onChange} = useForm({
+        name: '',
+        planet: '',
+        date: '',
+        description: '',
+        durationInDays: ''
+    })
     const history = useHistory()
 
-    const [name, onChangeName] = useInputController()
-    const [planet, onChangePlanet] = useInputController()
-    const [date, onChangeDate] = useInputController()
-    const [description, onChangeDescription] = useInputController()
-    const [durationInDays, onChangeDurationInDays] = useInputController()
-
     const cadastrar = () => {
-        const body = {
-            name: name,
-            planet: planet,
-            date: date,
-            description: description,
-            durationInDays: durationInDays
-        }
-
-        axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/nilson-julian/trips', body,{
-            headers:{'Content-Type':'application/json', auth: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Im93T2g5ZWo2bW50akZqNUNRMVB4IiwiZW1haWwiOiJhc3Ryb2RldkBnbWFpbC5jb20uYnIiLCJpYXQiOjE1ODk1NjI5MDh9.aB4dNbTCkToXB7pdzEa-tuMa-QbRQDUd93eva4-cec0'}
+        const body = form
+        const token = localStorage.getItem('token')
+        axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/nilson-julian/trips', form,{
+            headers:{'Content-Type':'application/json', auth: token}
         }).then((response)=>{
             console.log(response)
         }).catch((error)=>{
@@ -68,23 +63,59 @@ const CreateTrip = props => {
         })
        history.goBack()
     }
-
+    const handleInputChange = event => {
+        const { value, name } = event.target;
+        onChange(name, value);
+    };
+console.log(form)
     return(
         <ContainerCreateTripPage>
             <ImgLogo src={logo} alt="logo"/>
             <PaperStyled>
                 <FormStyled>
-                    <TextField name="email"value={name} onChange={onChangeName} label="Name" required />
-                    <TextField value={planet} onChange={onChangePlanet} label="Planet"required/>
+                    <TextField 
+                        name="name"
+                        value={form.name} 
+                        onChange={handleInputChange} 
+                        label="Name" 
+                        required 
+                    />
+                    <TextField 
+                        name="planet"
+                        value={form.planet} 
+                        onChange={handleInputChange} 
+                        label="Planet"
+                        required
+                    />
                     <ContainerDateDay>
-                        <TextField value={date} onChange={onChangeDate} type="date" required/>
-                        <TextField value={durationInDays} onChange={onChangeDurationInDays} type="number" label="Duration in days" required/>
+                        <TextField 
+                            name="date"
+                            value={form.date}
+                            onChange={handleInputChange} 
+                            type="date" 
+                            required
+                        />
+                        <TextField 
+                            name="durationInDays"
+                            value={form.durationInDays} 
+                            onChange={handleInputChange} 
+                            type="number" 
+                            label="Duration in days" 
+                            required
+                        />
                     </ContainerDateDay>
-                    <TextField value={description} onChange={onChangeDescription}label="Multiline"
-          multiline
-          rows={4} label="Description" required/>
+                    <TextField 
+                        name="description"
+                        value={form.description} 
+                        onChange={handleInputChange}
+                        label="Multiline"
+                        multiline
+                        rows={4} 
+                        label="Description" 
+                        required
+                    />
                     <ContainerButton>
-                        <Button onClick={cadastrar} color= "primary" onClick={()=>{}}>Cadastrar</Button>
+                        <Button onClick={cadastrar} color= "primary">Cadastrar</Button>
                     </ContainerButton>
                 </FormStyled>
             </PaperStyled>

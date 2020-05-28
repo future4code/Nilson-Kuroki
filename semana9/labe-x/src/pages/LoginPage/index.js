@@ -7,7 +7,7 @@ import logo from '../../image/logo-padrao.jfif'
 import {useHistory} from 'react-router-dom'
 // import {useInputController} from '../../customHooks/useInputController'
 import axios from 'axios'
-import useForm from '../../customHooks/useForm'
+import {useForm} from '../../customHooks/useForm'
 
 const ContainerLoginPage = styled.div`
 background-color: #5d66ea; 
@@ -35,7 +35,7 @@ const TextFieldStyled = styled(TextField)`
 const LoginPage = props =>{
     // const [email, onChangeEmail] = useInputController()
     // const [password, onChangePassWord] = useInputController()
-    const [form, onChange] = useForm({
+    const {form, onChange} = useForm({
         name: '',
         password: ''
     })
@@ -43,10 +43,10 @@ const LoginPage = props =>{
     
     const login = async() => {
         const body = {
-            email: email, 
-            password: password
+            email: form.email, 
+            password: form.password
         }
-        console.log(email)
+        console.log(form.email)
         try{
             const response = await axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/nilson-julian/login', body, {
                 headers:{ 
@@ -60,16 +60,29 @@ const LoginPage = props =>{
             alert('login ou senha incorreto')
         }
     }
-    const handleLogout = () => {
-        
-    }
 
+    const handleInputChange = event => {
+        const { value, name } = event.target;
+        onChange(name, value);
+    };
     return(
         <ContainerLoginPage>
             <PaperStyled variant="outlined">
             <ImgLogo src={logo} alt="logo"/>
-            <TextFieldStyled id="standard-basic" type="email"label="Email" value={email} onChange={onChangeEmail} />
-            <TextFieldStyled id="standard-basic" label="Password" type="password" value={password} onChange={onChangePassWord} />
+            <TextFieldStyled 
+                name="email"
+                type="email"
+                label="Email" 
+                value={form.email} 
+                onChange={handleInputChange}
+             />
+            <TextFieldStyled 
+                name="password"
+                label="Password" 
+                type="password" 
+                value={form.password} 
+                onChange={handleInputChange} 
+            />
             <Button variant="outlined" color="primary" onClick={login}>
                 Login
             </Button>

@@ -9,6 +9,7 @@ import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button'
 import axios from 'axios'
+import InputLabel from '@material-ui/core/InputLabel';
 
 const ContainerCadasterTripPage = styled.div`
     display: flex;
@@ -110,9 +111,11 @@ const CadasterTripPage = props => {
                         rows={4}
                         required
                     />
+                    <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
                     <Select name='country'
                     onChange={handleInputChange}
                     >
+                        
                         <MenuItem value='Brasil'>Brasil</MenuItem>
                         <MenuItem value='Argentina'>Argentina</MenuItem>
                         <MenuItem value='Canada'>Canada</MenuItem>

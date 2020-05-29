@@ -8,6 +8,8 @@ import TextField from '@material-ui/core/TextField';
 import axios from 'axios'
 import {useCheckLogin} from '../../customHooks/useCheckLogin'
 import {useForm} from '../../customHooks/useForm'
+import Select from "@material-ui/core/Select";
+import MenuItem from "@material-ui/core/MenuItem";
 
 const ContainerCreateTripPage = styled.div`
     height: 100%;
@@ -15,6 +17,7 @@ const ContainerCreateTripPage = styled.div`
     display: flex;
     align-items: center;
     flex-direction: column;
+    height: 100vh;
 `
 const ContainerButton = styled.div`
     padding: 20px;
@@ -41,6 +44,8 @@ const FormStyled = styled.form`
 `
 
 const CreateTrip = props => {
+    const history = useHistory()
+
     useCheckLogin()
     const {form, onChange} = useForm({
         name: '',
@@ -49,12 +54,12 @@ const CreateTrip = props => {
         description: '',
         durationInDays: ''
     })
-    const history = useHistory()
+    
 
     const cadastrar = () => {
         const body = form
         const token = localStorage.getItem('token')
-        axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/nilson-julian/trips', form,{
+        axios.post('https://us-central1-labenu-apis.cloudfunctions.net/labeX/nilson-julian/trips', body,{
             headers:{'Content-Type':'application/json', auth: token}
         }).then((response)=>{
             console.log(response)
@@ -77,45 +82,59 @@ console.log(form)
                         name="name"
                         value={form.name} 
                         onChange={handleInputChange} 
+                        inputProps={{ pattern: "[a-zA-Z ]{5,}",
+                        title: "O nome deve conter 5 letras no mínimo"
+                        }}
                         label="Name" 
-                        required 
+                        required={true}
                     />
-                    <TextField 
+                    <label>planet:</label>
+                    <Select
                         name="planet"
                         value={form.planet} 
                         onChange={handleInputChange} 
-                        label="Planet"
-                        required
-                    />
+                        required={true}
+                    >
+                        <MenuItem value="Marte">Marte</MenuItem>
+                        <MenuItem value="Mercurio">Mercúrio</MenuItem>
+                        <MenuItem value="Venus">Vênus</MenuItem>
+                        <MenuItem value="Jupiter">Júpiter</MenuItem>
+                        <MenuItem value="Saturno">Saturno</MenuItem>
+                        <MenuItem value="Urano">Urano</MenuItem>
+                        <MenuItem value="Netuno">Netuno</MenuItem>
+                    </Select>
                     <ContainerDateDay>
                         <TextField 
                             name="date"
                             value={form.date}
                             onChange={handleInputChange} 
                             type="date" 
-                            required
+                            required={true}
                         />
-                        <TextField 
+                        <TextField
                             name="durationInDays"
                             value={form.durationInDays} 
                             onChange={handleInputChange} 
                             type="number" 
+                            inputProps={{min: "50"}}
                             label="Duration in days" 
-                            required
+                            required={true}
                         />
                     </ContainerDateDay>
-                    <TextField 
+                    <TextField
                         name="description"
                         value={form.description} 
                         onChange={handleInputChange}
-                        label="Multiline"
-                        multiline
-                        rows={4} 
-                        label="Description" 
-                        required
+                        inputProps={{ pattern: "[a-zA-Z ]{50,}",
+                        title: "O nome deve conter 50 letras no mínimo",
+                        rows: "5"
+                        }}
+                        label="Description"
+                        required={true}
+                        
                     />
                     <ContainerButton>
-                        <Button onClick={cadastrar} color= "primary">Cadastrar</Button>
+                        <Button type={'submit'} onClick={cadastrar} color= "primary">Cadastrar</Button>
                     </ContainerButton>
                 </FormStyled>
             </PaperStyled>

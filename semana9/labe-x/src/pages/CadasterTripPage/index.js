@@ -10,13 +10,14 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Button from '@material-ui/core/Button'
 import axios from 'axios'
 import InputLabel from '@material-ui/core/InputLabel';
+import {ButtonBack} from '../../components/ButtonBack'
 
 const ContainerCadasterTripPage = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #5d66ea;
-    height: 100%;
+    height: 100vh;
 `
 
 const ImgLogo = styled.img`
@@ -30,6 +31,7 @@ const PaperStyled = styled(Paper)`
     flex-direction: column;
     align-items: center;
     margin-bottom: 20px;
+    margin-top: 20px;
 `
 const FormStyled = styled.form`
     display: flex;
@@ -44,7 +46,7 @@ const CadasterTripPage = props => {
         age: '',
         applicationText: '',
         profession: '',
-        country: ''
+        country: undefined
     })
     const handleInputChange = event => {
         const { value, name } = event.target;
@@ -72,6 +74,7 @@ const CadasterTripPage = props => {
     return(
         <ContainerCadasterTripPage>
             <ImgLogo src={logo} alt="logo"/>
+            <ButtonBack/>
             <PaperStyled>
                 <h3><b>Viagem: </b>{pathParams.nameTrip}</h3>
                 <h2>Cadastro</h2>
@@ -98,7 +101,7 @@ const CadasterTripPage = props => {
                         name='profession' 
                         value={form.profession} 
                         label='profissão'
-                        inputProps={{ pattern: "[A-Za-z ]{10,}", title:"O nome deve ter no minimo 3 letras" }}
+                        inputProps={{ pattern: "[A-Za-z ]{10,}", title:"O nome deve ter no minimo 10 letras" }}
                         type='text' 
                         onChange={handleInputChange} 
                         required
@@ -116,6 +119,7 @@ const CadasterTripPage = props => {
                     <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
                     <Select name='country'
                     onChange={handleInputChange}
+                    required
                     >
                         <MenuItem value="Albânia">Albânia</MenuItem>
                         <MenuItem value="África do Sul">África do Sul</MenuItem>

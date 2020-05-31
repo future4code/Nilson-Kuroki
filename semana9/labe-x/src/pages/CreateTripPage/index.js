@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react'
 import styled from 'styled-components'
-import {useHistory} from 'react-router-dom'
 import Button from '@material-ui/core/Button'
 import logo from '../../image/Logo.png'
 import Paper from '@material-ui/core/Paper';
@@ -10,6 +9,7 @@ import {useCheckLogin} from '../../customHooks/useCheckLogin'
 import {useForm} from '../../customHooks/useForm'
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
+import {ButtonBack} from '../../components/ButtonBack'
 
 const ContainerCreateTripPage = styled.div`
     height: 100%;
@@ -27,6 +27,7 @@ const ImgLogo = styled.img`
     margin-bottom: 20px;
 `
 const PaperStyled = styled(Paper)`
+    margin-top: 20px;
     width: 50vw;
     display: flex; 
     flex-direction: column;
@@ -44,7 +45,6 @@ const FormStyled = styled.form`
 `
 
 const CreateTrip = props => {
-    const history = useHistory()
 
     useCheckLogin()
     const {form, onChange} = useForm({
@@ -66,7 +66,6 @@ const CreateTrip = props => {
         }).catch((error)=>{
             console.log(error)
         })
-       history.goBack()
     }
     const handleInputChange = event => {
         const { value, name } = event.target;
@@ -76,6 +75,7 @@ console.log(form)
     return(
         <ContainerCreateTripPage>
             <ImgLogo src={logo} alt="logo"/>
+            <ButtonBack/>
             <PaperStyled>
                 <FormStyled>
                     <TextField 
@@ -138,8 +138,6 @@ console.log(form)
                     </ContainerButton>
                 </FormStyled>
             </PaperStyled>
-            
-      
         </ContainerCreateTripPage>
     )
 }

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import logo from '../../image/Logo.png'
 import Paper from '@material-ui/core/Paper';
 import {useCheckLogin} from '../../customHooks/useCheckLogin'
+import {ButtonBack} from '../../components/ButtonBack'
 import {useParams} from 'react-router-dom'
 import Card from '@material-ui/core/Card';
 import axios from 'axios';
@@ -23,7 +24,7 @@ const PaperStyled = styled(Paper)`
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin-top: 20px;
 `
 const CardStyled = styled(Card)`
     width: 90%;
@@ -75,6 +76,7 @@ const ListUsers = props => {
     return(
         <ContainerListusersPage>
             <ImgLogo src={logo} alt="logo"/>
+            <ButtonBack/>
             <PaperStyled>
                 <h1>{tripAndCandidates.name}</h1>
                 <p>{tripAndCandidates.planet}</p>

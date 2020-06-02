@@ -116,7 +116,7 @@ const CadasterTripPage = props => {
                         rows={4}
                         required
                     />
-                    <InputLabel id="demo-simple-select-helper-label">Age</InputLabel>
+                    <InputLabel id="demo-simple-select-helper-label">Country</InputLabel>
                     <Select name='country'
                     onChange={handleInputChange}
                     required

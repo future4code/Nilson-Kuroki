@@ -21,6 +21,7 @@ const App = () => {
     const newPostsList = [newPost, ...postsList];
 
     setPostsList(newPostsList);
+    setInputValue('')
   };
 
   const deletePost = postId => {
@@ -68,7 +69,6 @@ const App = () => {
             post={post}
             toggleLike={toggleLike}
             deletePost={deletePost}
-            
           />
         );
       })}

@@ -1,5 +1,5 @@
 import React from "react";
-import { render, fireEvent } from "@testing-library/react";
+import { render, fireEvent, getByPlaceholderText } from "@testing-library/react";
 import "@testing-library/jest-dom/extend-expect";
 import App from "./App";
 
@@ -59,11 +59,27 @@ describe("adiciona novos posts", ()=>{
 
     test("apagar um post criado", ()=>{
         
-        const {getByText, getAllByTestId} = adicionarPost()
+        const {getByText, queryAllByTestId} = adicionarPost()
 
         const bottonDelete = getByText(/Apagar/i)
         fireEvent.click(bottonDelete)
 
-        expect(getAllByTestId('item-tarefa').toHaveLength(0))
+        expect(queryAllByTestId('like-button')).toHaveLength(0)
+    })
+})
+
+describe("Segunda parte dos exercicios", ()=>{
+    test("quando clicar no botao adicionar o input deve ser limpo",()=>{
+        const {getByPlaceholderText} = adicionarPost()
+
+        expect(getByPlaceholderText(/Novo post/i)).toHaveValue('')
+    })
+
+    test("aparecer a mensagem 'nenhum post' caso nao tenha post e se tiver que ela suma",()=>{
+        const {getByText} = render(<App/>)
+
+        const post = getByText(/nenhum post/i)
+
+        expect(post).toEqual()
     })
 })

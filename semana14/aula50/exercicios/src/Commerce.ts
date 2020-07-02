@@ -8,7 +8,7 @@ export class Commerce extends Place{
         super(cep)
     }
 
-    getFloorsQuantity(): number{
+    public getFloorsQuantity(): number{
         return this.floorsQuantity
     }
 }

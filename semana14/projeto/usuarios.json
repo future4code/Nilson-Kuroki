@@ -1,0 +1,23 @@
+[
+  {
+    "name": "nilson",
+    "cpf": "60506",
+    "birthDate": 5405,
+    "balance": 0,
+    "extract": []
+  },
+  {
+    "name": "Ronaldo",
+    "cpf": "111.111.111-11",
+    "birthDate": "11/11/11",
+    "balance": 0,
+    "extract": []
+  },
+  {
+    "name": "alice",
+    "cpf": "111.111.111-11",
+    "birthDate": "10/10/2001",
+    "balance": 0,
+    "extract": []
+  }
+]
